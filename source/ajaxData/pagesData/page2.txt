@@ -1,5 +1,0 @@
-[{"name":"aa","age":"15","group":"五班"},
-{"name":"bb","age":"12","group":"二班"},
-{"name":"cc","age":"14","group":"八班"},
-{"name":"dd","age":"21","group":"一班"},
-{"name":"ee","age":"16","group":"一班"},]
