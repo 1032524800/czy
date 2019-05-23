@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="../../js/jQuery/jquery-3.4.0.js"></script>
+<script src="../../js/jQuery/jquery.validate.js"></script>
+<script>
+// $.validator.setDefaults({
+//     submitHandler: function() {
+//         alert("提交事件!");
+//     }
+// });
+$().ready(function() {
+    $("#commentForm").validate();
+});
+</script>
+<style>
+.error{
+    color:red;
+}
+</style>
+</head>
+<body>
+    <form class="cmxform" id="commentForm" method="get" action="http://localhost/test/submit">
+        <fieldset>
+            <legend>输入您的名字，邮箱，URL，备注。</legend>
+            <p>
+                <label for="cname">Name (必需, 最小两个字母)</label>
+                <input id="cname" name="name" minlength="2" type="text" required="true" remote="http://localhost/test/removeValidate">
+            </p>
+            <p>
+                <label for="cemail">E-Mail (必需)</label>
+                <input id="cemail" type="email" name="email" required>
+            </p>
+            <p>
+                <label for="curl">URL (可选)</label>
+                <input id="curl" type="url" name="url">
+            </p>
+            <p>
+                <label for="ccomment">备注 (必需)</label>
+                <textarea id="ccomment" name="comment" required></textarea>
+            </p>
+            <p>
+                <label for="age">年龄 (必需)</label>
+                <input id="age" name="age" range="[0,100]"></input>
+            </p>
+            <p>
+                <label for="password">密码 (必需)</label>
+                <input id="password" name="password" rangelength="[5,10]"></input>
+            </p>
+            <p>
+                <label for="password2">重复输入密码 (必需)</label>
+                <input id="password2" name="password2" equalTo="#password"></input>
+            </p>
+            <p>
+                <input class="submit" type="submit" value="Submit">
+            </p>
+        </fieldset>
+    </form>
+</body>          
+</html>

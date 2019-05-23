@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="../../js/jQuery/jquery-3.4.0.js">
+</script>
+
+<style>
+    .color_red {
+        color: red;
+        background-color: red;
+    }
+    .bianda {
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<script>
+$(document).ready(function(){
+//   $("*").click(function(){
+//       alert("鼠标点击了一下");
+//   })
+    // $("#lastname").click(function(){
+    //   alert("鼠标点击了一下");
+    // })
+
+    $("*").click(function(){
+        if($(this).hasClass("bianda")){
+            alert("这是一个变大的元素")
+        }
+    })
+
+    // $(".myclass,.myclass2").click(function(){
+    //   alert("鼠标点击了一下");
+    // })
+
+    // $("div p").click(function(){
+    //   alert("鼠标点击了一下");
+    // })
+
+    // $("#divbox p:nth-child(2)").click(function(){
+    //   alert("鼠标点击了一下");
+    // })
+
+    // $("[abc=myabc]").click(function(){
+    //   alert("鼠标点击了一下");
+    // })
+});
+</script>
+</head>
+<body>
+
+<div id="lastname" name="myname" abc="myabc">
+    <p>div里面的p标签<button>p里面的button</button></p>
+    <button>div里面的button</button>
+</div>
+<button>我是button</button>
+<div id="divbox">
+    <p class="myclass myclass2">我是p标签1</p>
+    <p class="myclass">我是p标签2</p>
+    <p>我是p标签3</p>
+</div>
+<div class="myclass">div1</div>
+<div class="myclass2">div2</div>
+<div class="bianda">div3</div>
+</body>          
+</html>
